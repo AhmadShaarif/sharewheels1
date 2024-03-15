@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "769191925485",
+    "project_id": "sharewheels-4b5ea",
+    "storage_bucket": "sharewheels-4b5ea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:769191925485:android:f77afbf2075f75faa01ee4",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcvYOsocMPr9INRBLrJgKuXPyVRwvBKCI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:769191925485:android:16eb18f1247b5dd1a01ee4",
+        "android_client_info": {
+          "package_name": "com.example.sharewheelslogin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcvYOsocMPr9INRBLrJgKuXPyVRwvBKCI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
