@@ -15,6 +15,15 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".carpool"
+            android:exported="false" />
+        <activity
+            android:name=".inbox"
+            android:exported="false" />
+        <activity
+            android:name=".my_car"
+            android:exported="false" />
+        <activity
             android:name=".Prevrides_Activity"
             android:exported="false" />
         <activity

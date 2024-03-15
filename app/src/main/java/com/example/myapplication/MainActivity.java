@@ -1,9 +1,12 @@
 package com.example.myapplication;
 
+
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.myapplication.Login_Activity;
 import com.example.myapplication.Register_Activity;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
     private Button mainlogin;
@@ -40,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {

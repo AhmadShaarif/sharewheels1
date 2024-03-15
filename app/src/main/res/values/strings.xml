@@ -4,4 +4,8 @@
     <string name="hello">Hello</string>
     <string name="settings">Settings</string>
     <string name="hello1">Hello1</string>
+    <string name="hello_blank_fragment" />
+    <string name="previous_rides">Previous Rides</string>
+    <string name="this_is_the_my_carpool_section">This is the my carpool section</string>
+    <string name="this_is_the_my_inbox_section" />
 </resources>

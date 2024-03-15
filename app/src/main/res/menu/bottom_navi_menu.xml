@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_my_car"
+        android:title="My car"
+        android:icon="@drawable/mycar"
+        />
+
+    <item
+        android:id="@+id/car_pool"
+        android:title="Car Pool"
+        android:icon="@drawable/carpool"
+        />
+
+    <item
+        android:id="@+id/dashboard"
+        android:title="Dashboard"
+        android:icon="@drawable/dashboard"
+        />
+
+    <item
+        android:id="@+id/inbox"
+        android:title="Inbox"
+        android:icon="@drawable/inbox"
+        />
+</menu>
