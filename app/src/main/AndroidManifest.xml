@@ -24,9 +24,6 @@
             android:name=".my_car"
             android:exported="false" />
         <activity
-            android:name=".EnterDetails"
-            android:exported="false" />
-        <activity
             android:name=".Prevrides_Activity"
             android:exported="false" />
         <activity
