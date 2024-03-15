@@ -3,6 +3,7 @@ package com.example.myapplication;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,9 +17,15 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class Register_Activity extends AppCompatActivity {
     private EditText text_email;
@@ -26,6 +33,9 @@ public class Register_Activity extends AppCompatActivity {
     private EditText text_password;
     private Button button_register;
     private FirebaseAuth auth;
+
+    private FirebaseFirestore fstore;
+    private String userID;
 
 
     @Override
@@ -38,7 +48,8 @@ public class Register_Activity extends AppCompatActivity {
         text_name = findViewById(R.id.text_name);
         text_password = findViewById(R.id.text_password);
         button_register = findViewById(R.id.button_register);
-        auth =FirebaseAuth.getInstance();
+        auth = FirebaseAuth.getInstance();
+        fstore = FirebaseFirestore.getInstance();
 
         button_register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,15 +83,24 @@ public class Register_Activity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
                     Toast.makeText(Register_Activity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(Register_Activity.this , Dashboard_Activity.class));
-                    finish();
+                    userID = auth.getCurrentUser().getUid();
+                    DocumentReference documentReference = fstore.collection("users").document(userID);
+                    Map<String, Object> user = new HashMap<>();
+                    user.put("fName", text_name);
+                    user.put("email", text_email);
+                    documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                                         @Override
+                                                                         public void onSuccess(Void unused) {
+                                                                             Log.d("TAG", "onSuccess: user profile is created for"+ userID);
+                                                                         }
+                                                                     });
+                            startActivity(new Intent(Register_Activity.this, Dashboard_Activity.class));
                 } else{
                     Toast.makeText(Register_Activity.this, "Registration Failed", Toast.LENGTH_SHORT).show();
                 }
 
             }
         });
-    }
+    }}
 
 
-}
