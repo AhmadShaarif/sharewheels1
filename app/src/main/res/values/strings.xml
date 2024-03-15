@@ -2,4 +2,6 @@
     <string name="app_name">My Application</string>
     <string name="david_friedman">David Friedman</string>
     <string name="hello">Hello</string>
+    <string name="settings">Settings</string>
+    <string name="hello1">Hello1</string>
 </resources>

@@ -20,7 +20,6 @@ import com.google.firebase.auth.FirebaseAuth;
 public class Login_Activity extends AppCompatActivity {
     private EditText email;
     private EditText password;
-    private Button loginbtn;
     private FirebaseAuth auth;
 
 
@@ -32,7 +31,7 @@ public class Login_Activity extends AppCompatActivity {
 
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
-        loginbtn = findViewById(R.id.loginbtn);
+        Button loginbtn = findViewById(R.id.loginbtn);
 
         auth = FirebaseAuth.getInstance();
         loginbtn.setOnClickListener(new View.OnClickListener() {
@@ -57,7 +56,6 @@ public class Login_Activity extends AppCompatActivity {
             public void onSuccess(AuthResult authResult) {
                 Toast.makeText(Login_Activity.this, "Login Success", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(Login_Activity.this , Dashboard_Activity.class));
-                finish();
             }
         });
     }
