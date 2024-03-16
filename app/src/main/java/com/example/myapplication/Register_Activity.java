@@ -31,7 +31,6 @@ public class Register_Activity extends AppCompatActivity {
     private EditText text_email;
     private EditText text_name;
     private EditText text_password;
-    private Button button_register;
     private FirebaseAuth auth;
 
     private FirebaseFirestore fstore;
@@ -47,7 +46,7 @@ public class Register_Activity extends AppCompatActivity {
         text_email = findViewById(R.id.text_email);
         text_name = findViewById(R.id.text_name);
         text_password = findViewById(R.id.text_password);
-        button_register = findViewById(R.id.button_register);
+        Button button_register = findViewById(R.id.button_register);
         auth = FirebaseAuth.getInstance();
         fstore = FirebaseFirestore.getInstance();
 
