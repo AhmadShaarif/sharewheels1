@@ -6,6 +6,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -30,6 +31,7 @@ import java.util.List;
 public class carpool extends AppCompatActivity {
 
     private AutoCompleteTextView autoCompleteTextView;
+    private Button button69;
     private AutoCompleteTextView autoCompleteTextView2;
     private PlacesClient placesClient;
     private List<AutocompletePrediction> predictionList;

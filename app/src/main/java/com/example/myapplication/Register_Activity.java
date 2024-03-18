@@ -49,7 +49,14 @@ public class Register_Activity extends AppCompatActivity {
         Button button_register = findViewById(R.id.button_register);
         auth = FirebaseAuth.getInstance();
         fstore = FirebaseFirestore.getInstance();
+        Button back = findViewById(R.id.back);
 
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Register_Activity.this, MainActivity.class));
+            }
+        });
         button_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

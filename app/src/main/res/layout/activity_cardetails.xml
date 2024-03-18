@@ -79,13 +79,12 @@
         android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:text="Back"
         android:textColor="#199B33"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.042" />
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"/>
 
     <ImageButton
         android:id="@+id/next"
